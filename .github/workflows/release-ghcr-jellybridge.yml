@@ -46,7 +46,7 @@ jobs:
         with:
           images: ghcr.io/${{ github.repository }}
           tags: |
-            type=raw,value={{version}}
+            type=raw,value=${{ env.VERSION }}
             type=raw,value=jellybridge
           labels: |
             org.opencontainers.image.created=${{ steps.ts.outputs.TIMESTAMP }}
